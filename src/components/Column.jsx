@@ -11,6 +11,7 @@ export default function Column({ state }) {
     const [open, setOpen] = useState(false);
     const [drop, setDrop] = useState(false);
 
+    //store
     const addTask = useStore((store) => store.addTask);
     const setDraggedTask = useStore((store) => store.setDraggedTask);
     const draggedTask = useStore((store) => store.draggedTask);
@@ -68,15 +69,14 @@ export default function Column({ state }) {
             {open && (
                 <div className='Modal'>
                     <div className='modalContent'>
-                        <input onChange={ (e) => {
-                            e.preventDefault();
+                        <input onChange={(e) => {
                             setText(e.target.value);
                         }}
                             value={text} />
                         <button onClick={() => {
-                            addTask(text, state);
-                            setText('');
+                            e.preventDefault();
                             setOpen(false);
+                            setText('');
                         }}>Submit
                         </button>
                         <button onClick={() => {

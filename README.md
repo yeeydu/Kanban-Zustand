@@ -6,6 +6,8 @@ A TODO APP WITH DRAGGABLE OPTIONS LIKE KANBEN MADE WITH REACT AND ZUSTAND STATE 
 - npm i zustand
 - npm I classnames
 
+## testing
+- npm i --save-dev vitest @testing-library/jest-dom @testing-library/react jsdom
 ------------------------------------
 
 # devtools works with redux chrome extension
