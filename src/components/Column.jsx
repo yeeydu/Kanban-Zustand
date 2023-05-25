@@ -43,19 +43,19 @@ export default function Column({ state }) {
     */
 
     return (
-        <div className={classNames("column", {drop: drop}) }
-            onDragOver={(e) => { 
+        <div className={classNames("column", { drop: drop })}
+            onDragOver={(e) => {
                 e.preventDefault();
-                setDrop(true); 
+                setDrop(true);
             }}
             onDrop={(e) => {
                 setDraggedTask(null);
                 moveTask(draggedTask, state);
-                setDrop(false); 
+                setDrop(false);
             }}
-            onDragLeave={(e) => { 
+            onDragLeave={(e) => {
                 e.preventDefault();
-                setDrop(false); 
+                setDrop(false);
             }}
         >
             <div className='titleWrapper'>
@@ -68,12 +68,20 @@ export default function Column({ state }) {
             {open && (
                 <div className='Modal'>
                     <div className='modalContent'>
-                        <input onChange={(e) => setText(e.target.value)} value={text} />
+                        <input onChange={ (e) => {
+                            e.preventDefault();
+                            setText(e.target.value);
+                        }}
+                            value={text} />
                         <button onClick={() => {
                             addTask(text, state);
                             setText('');
                             setOpen(false);
                         }}>Submit
+                        </button>
+                        <button onClick={() => {
+                            setOpen(false);
+                        }}>Cancel
                         </button>
                     </div>
                 </div>
