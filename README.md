@@ -6,6 +6,8 @@ A TODO APP WITH DRAGGABLE OPTIONS LIKE KANBEN MADE WITH REACT AND ZUSTAND STATE 
 - npm i zustand
 - npm I classnames
 
+<img src="/public/imgage.png" alt="example" title="example">
+
 ## Testing
 - npm i --save-dev vitest @testing-library/jest-dom @testing-library/react jsdom
 ------------------------------------
