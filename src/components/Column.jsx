@@ -69,15 +69,20 @@ export default function Column({ state }) {
             {open && (
                 <div className='Modal'>
                     <div className='modalContent'>
-                        <input onChange={(e) => {
-                            setText(e.target.value);
-                        }}
-                            value={text} />
-                        <button onClick={() => {
-                            e.preventDefault();
-                            setOpen(false);
-                            setText('');
-                        }}>Submit
+                        <input
+                            onChange={(e) => {
+                                setText(e.target.value);
+                            }}
+                            value={text}
+                            required
+                        />
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                addTask(text, state)
+                                setOpen(false);
+                                setText('');
+                            }}>Submit
                         </button>
                         <button onClick={() => {
                             setOpen(false);
