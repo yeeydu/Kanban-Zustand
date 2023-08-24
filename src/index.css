@@ -2,7 +2,7 @@
   --COLOR-GRAY: #333333;
   --COLOR-GRAY-DARK: #222222;
   --COLOR-GRAY-LIGHT: #cccccc;
-  --COLOR-ONGOING: #98c1d9;
+  --COLOR-ONGOING: #84caf3;
   --COLOR-DONE: #ee6c4d;
   font-family: Helvetica, sans-serif;
 }
@@ -13,4 +13,8 @@ body {
 
 * {
   box-sizing: border-box; /*padding inside the element*/
+}
+
+.App{
+  padding-top: 1rem;
 }
